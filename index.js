@@ -9,7 +9,12 @@ const taskRoutes = require("./routes/taskRoutes");
 const profileRoutes = require("./routes/profileRoutes");
 
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+      origin: '*',
+      credential: true,
+  })
+);
 
 const mongoUrl = "mongodb+srv://chandan22:aT1Y7YesryIbGlsl@todo.alcbhxq.mongodb.net/";
 mongoose.connect(mongoUrl, err => {
