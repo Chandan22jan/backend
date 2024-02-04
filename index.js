@@ -9,6 +9,7 @@ const taskRoutes = require("./routes/taskRoutes");
 const profileRoutes = require("./routes/profileRoutes");
 
 app.use(express.json());
+app.use(express.static('dist'));
 app.use(
   cors({
       origin: '*',
